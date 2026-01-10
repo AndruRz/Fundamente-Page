@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNDAMENTE - Fundación Integral de Desarrollo</title>
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <img src="./public/img/logo-fundamento.png" alt="Logo FUNDAMENTE" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">FUNDAMENTE</span>
+                    <span class="logo-sub">Fundación Integral de Desarrollo</span>
+                </div>
+            </div>
+
+            <!-- Menú hamburguesa (móvil) -->
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Menú principal -->
+            <ul class="navbar-menu" id="navbarMenu">
+                <li class="navbar-item">
+                    <a href="#inicio" class="navbar-link active">Inicio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#quienes-somos" class="navbar-link">Quiénes Somos</a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a href="#programas" class="navbar-link">
+                        Programas
+                        <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                            <path d="M6 9L1 4h10L6 9z"/>
+                        </svg>
+                    </a>
+                <ul class="dropdown-menu">
+                    <li><a href="./pages/programas.html?id=educacion" class="dropdown-link">Educación</a></li>
+                    <li><a href="./pages/programas.html?id=deporte" class="dropdown-link">Deporte</a></li>
+                    <li><a href="./pages/programas.html?id=recreacion" class="dropdown-link">Recreación</a></li>
+                    <li><a href="./pages/programas.html?id=medioambiente" class="dropdown-link">Medio Ambiente</a></li>
+                </ul>
+                </li>
+                <li class="navbar-item">
+                    <a href="#equipo" class="navbar-link">Equipo</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#galeria" class="navbar-link">Galería</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#como-ayudar" class="navbar-link">Cómo Ayudar</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#contacto" class="navbar-link">Contacto</a>
+                </li>
+            </ul>
+
+            <!-- Botón CTA principal -->
+           <a href="#" class="navbar-cta" id="btnApoyarAhora">Apoyar Ahora</a>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION - PARALLAX ============ -->
+    <section class="hero" id="inicio">
+        <!-- Capas de parallax (se moverán a diferentes velocidades) -->
+        
+        <!-- Capa 1: Fondo más lejano (movimiento más lento) -->
+        <div class="parallax-layer parallax-layer-1" data-speed="0.3">
+            <img src="./public/img/hero-bg-layer-1.jpeg" alt="Fondo Ciudad Córdoba" class="parallax-img">
+        </div>
+
+        <!-- Capa 2: Capa intermedia -->
+        <div class="parallax-layer parallax-layer-2" data-speed="0.5">
+            <img src="./public/img/hero-bg-layer-2.jpg" alt="Siluetas niños" class="parallax-img">
+        </div>
+
+        <!-- Capa 3: Elementos decorativos (círculos, formas) -->
+        <div class="parallax-layer parallax-layer-3" data-speed="0.7">
+            <div class="floating-shape shape-circle orange"></div>
+            <div class="floating-shape shape-circle green"></div>
+            <div class="floating-shape shape-triangle orange"></div>
+        </div>
+
+        <!-- Overlay oscuro para legibilidad del texto -->
+        <div class="hero-overlay"></div>
+
+        <!-- Contenido principal del Hero -->
+        <div class="hero-content">
+            <!-- Título principal con animación de aparición -->
+            <h1 class="hero-title">
+                <span class="hero-title-line hero-title-line-1">Transformando Vidas</span>
+                <span class="hero-title-line hero-title-line-2">en el Distrito de Aguablanca</span>
+            </h1>
+
+            <!-- Subtítulo con la misión resumida -->
+            <p class="hero-subtitle">
+                Desarrollo integral para niños y niñas vulnerables a través de 
+                <span class="highlight-text">educación</span>, 
+                <span class="highlight-text">deporte</span>, 
+                <span class="highlight-text">recreación</span> y 
+                <span class="highlight-text">cultura</span>
+            </p>
+
+            <!-- Estadísticas rápidas (animadas con contador) -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Niños Impactados</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15">0</span>
+                    <span class="stat-label">Programas Activos</span>
+                </div>
+                <div class="stat-separator"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Años de Impacto</span>
+                </div>
+            </div>
+
+            <!-- Botones de llamado a la acción -->
+            <div class="hero-cta">
+                <a href="#programas" class="btn btn-primary">
+                    <span class="btn-text">Conoce Nuestros Programas</span>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 5l5 5-5 5V5z"/>
+                    </svg>
+                </a>
+                <a href="#" class="btn btn-secondary" id="btnApoyarHero">
+                    <svg class="btn-icon-left" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span class="btn-text">Apoya Nuestra Causa</span>
+                </a>
+            </div>
+
+            <!-- Indicador de scroll animado -->
+            <div class="scroll-indicator">
+                <span class="scroll-text">Descubre más</span>
+                <div class="scroll-icon">
+                    <div class="scroll-dot"></div>
+                </div>
+                <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Partículas flotantes decorativas (opcional) -->
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS SECTION ============ -->
+    <section class="quienes-somos" id="quienes-somos">
+        <div class="quienes-somos-container">
+            
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <span class="section-label">Nuestra Historia</span>
+                <h2 class="section-title">
+                    <span class="title-highlight">¿Quiénes</span> Somos?
+                </h2>
+                <p class="section-description">
+                    Una fundación comprometida con el desarrollo integral de la niñez vulnerable 
+                    en Ciudad Córdoba y el Distrito de Aguablanca
+                </p>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="quienes-somos-content">
+                
+                <!-- Columna izquierda: Imagen -->
+                <div class="content-image">
+                    <div class="image-wrapper">
+                        <img src="./public/img/quienes-somos-main.jpg" alt="Niños de FUNDAMENTE" class="main-image">
+                        <div class="image-overlay">
+                            <div class="overlay-badge">
+                                <span class="badge-number">2022</span>
+                                <span class="badge-text">Año de Fundación</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagen decorativa secundaria -->
+                    <div class="image-decoration">
+                        <img src="./public/img/quienes-somos-secondary.jpg" alt="Actividades FUNDAMENTE" class="secondary-image">
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Texto -->
+                <div class="content-text">
+                    <div class="text-block">
+                        <p class="text-body">
+                            La Fundación Integral de Desarrollo <strong>(FUNDAMENTE)</strong> nace en febrero de 2022 
+                            con el propósito de impulsar un desarrollo integral, sostenible y sustentable para la 
+                            población vulnerable de la comuna 15, especialmente en el barrio Ciudad Córdoba.
+                        </p>
+                        
+                        <p class="text-body">
+                            Somos una entidad sin ánimo de lucro conformada por un grupo de profesionales 
+                            de diversas áreas educativas que unimos nuestros talentos para contribuir 
+                            a la sociedad. Brindamos apoyo en espacios deportivos, recreativos, educativos 
+                            y sociales, creando oportunidades reales de transformación.
+                        </p>
+                    </div>
+
+                    <!-- Valores destacados -->
+                    <div class="valores-grid">
+                        <div class="valor-item">
+                            <div class="valor-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="valor-content">
+                                <h4 class="valor-title">Compromiso Social</h4>
+                                <p class="valor-text">Dedicados al bienestar de nuestra comunidad</p>
+                            </div>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="valor-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="valor-content">
+                                <h4 class="valor-title">Trabajo en Equipo</h4>
+                                <p class="valor-text">Profesionales unidos por un mismo objetivo</p>
+                            </div>
+                        </div>
+
+                        <div class="valor-item">
+                            <div class="valor-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                                </svg>
+                            </div>
+                            <div class="valor-content">
+                                <h4 class="valor-title">Impacto Real</h4>
+                                <p class="valor-text">Resultados medibles en nuestras comunidades</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón CTA -->
+                    <a href="./pages/acerca_de_fundamente.html" class="btn-conoce-mas">
+                        <span class="btn-text">Conoce Más</span>
+                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 10h10M10 5l5 5-5 5"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROGRAMAS SECTION ============ -->
+    <section class="programas" id="programas">
+        <div class="programas-container">
+            
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <span class="section-label">Nuestro Impacto</span>
+                <h2 class="section-title">
+                    Nuestros <span class="title-highlight">Programas</span>
+                </h2>
+                <p class="section-description">
+                    Creamos espacios de transformación social a través de programas integrales 
+                    que impulsan el desarrollo de niños y niñas en situación de vulnerabilidad
+                </p>
+            </div>
+
+            <!-- Grid de programas -->
+            <div class="programas-grid">
+                
+                <!-- Programa 1: Educación -->
+                <article class="programa-card" data-programa="educacion">
+                    <div class="card-header">
+                        <div class="card-icon educacion">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <span class="card-numero">01</span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3 class="card-title">Educación</h3>
+                        <p class="card-description">
+                            Fortalecemos el aprendizaje y desarrollo académico de los niños a través 
+                            de refuerzo escolar, talleres de lectura y programas de alfabetización.
+                        </p>
+                        
+                        <div class="card-objetivo">
+                            <h4 class="objetivo-label">¿Qué buscamos?</h4>
+                            <p class="objetivo-text">
+                                Reducir la deserción escolar y mejorar el rendimiento académico, 
+                                brindando herramientas educativas que abran puertas al futuro.
+                            </p>
+                        </div>
+                        
+                        <div class="card-impacto">
+                            <div class="impacto-item">
+                                <span class="impacto-numero">200+</span>
+                                <span class="impacto-label">Niños beneficiados</span>
+                            </div>
+                            <div class="impacto-item">
+                                <span class="impacto-numero">85%</span>
+                                <span class="impacto-label">Mejora académica</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                            <a href="./pages/programas.html?id=educacion" class="card-link">
+                            <span>Ver más detalles</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-decoration"></div>
+                </article>
+
+                <!-- Programa 2: Deporte -->
+                <article class="programa-card" data-programa="deporte">
+                    <div class="card-header">
+                        <div class="card-icon deporte">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                <path d="M2 12h20"/>
+                            </svg>
+                        </div>
+                        <span class="card-numero">02</span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3 class="card-title">Deporte</h3>
+                        <p class="card-description">
+                            Promovemos la actividad física y el deporte como herramientas de 
+                            formación integral, disciplina y trabajo en equipo.
+                        </p>
+                        
+                        <div class="card-objetivo">
+                            <h4 class="objetivo-label">¿Qué buscamos?</h4>
+                            <p class="objetivo-text">
+                                Alejar a los niños de entornos de riesgo, fomentar hábitos saludables 
+                                y desarrollar valores como el respeto, la perseverancia y la solidaridad.
+                            </p>
+                        </div>
+                        
+                        <div class="card-impacto">
+                            <div class="impacto-item">
+                                <span class="impacto-numero">150+</span>
+                                <span class="impacto-label">Deportistas activos</span>
+                            </div>
+                            <div class="impacto-item">
+                                <span class="impacto-numero">8</span>
+                                <span class="impacto-label">Disciplinas ofrecidas</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                            <a href="./pages/programas.html?id=deporte" class="card-link">
+                            <span>Ver más detalles</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-decoration"></div>
+                </article>
+
+                <!-- Programa 3: Recreación -->
+                <article class="programa-card" data-programa="recreacion">
+                    <div class="card-header">
+                        <div class="card-icon recreacion">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                            </svg>
+                        </div>
+                        <span class="card-numero">03</span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3 class="card-title">Recreación</h3>
+                        <p class="card-description">
+                            Diseñamos actividades lúdicas y recreativas que estimulan la creatividad, 
+                            la imaginación y el desarrollo socioemocional de los niños.
+                        </p>
+                        
+                        <div class="card-objetivo">
+                            <h4 class="objetivo-label">¿Qué buscamos?</h4>
+                            <p class="objetivo-text">
+                                Proporcionar espacios seguros donde los niños puedan ser niños, 
+                                desarrollar su personalidad y crear lazos de amistad en un ambiente sano.
+                            </p>
+                        </div>
+                        
+                        <div class="card-impacto">
+                            <div class="impacto-item">
+                                <span class="impacto-numero">180+</span>
+                                <span class="impacto-label">Participantes</span>
+                            </div>
+                            <div class="impacto-item">
+                                <span class="impacto-numero">12</span>
+                                <span class="impacto-label">Actividades mensuales</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                            <a href="./pages/programas.html?id=recreacion" class="card-link">
+                            <span>Ver más detalles</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-decoration"></div>
+                </article>
+
+                <!-- Programa 4: Medio Ambiente -->
+                <article class="programa-card" data-programa="medio-ambiente">
+                    <div class="card-header">
+                        <div class="card-icon medio-ambiente">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                <path d="M2 12h20"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <span class="card-numero">04</span>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h3 class="card-title">Medio Ambiente</h3>
+                        <p class="card-description">
+                            Fomentamos la conciencia ambiental a través de talleres de reciclaje, 
+                            huertos urbanos y actividades de limpieza comunitaria.
+                        </p>
+                        
+                        <div class="card-objetivo">
+                            <h4 class="objetivo-label">¿Qué buscamos?</h4>
+                            <p class="objetivo-text">
+                                Formar ciudadanos responsables con el planeta, que comprendan la 
+                                importancia de cuidar su entorno y generen cambios positivos en sus comunidades.
+                            </p>
+                        </div>
+                        
+                        <div class="card-impacto">
+                            <div class="impacto-item">
+                                <span class="impacto-numero">120+</span>
+                                <span class="impacto-label">Eco-líderes formados</span>
+                            </div>
+                            <div class="impacto-item">
+                                <span class="impacto-numero">5</span>
+                                <span class="impacto-label">Huertos comunitarios</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <a href="./pages/programas.html?id=medioambiente" class="card-link">
+                            <span>Ver más detalles</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="card-decoration"></div>
+                </article>
+
+            </div>
+
+            <!-- CTA Final -->
+            <div class="programas-cta">
+                <h3 class="cta-title">¿Quieres ser parte del cambio?</h3>
+                <p class="cta-text">
+                    Únete a nosotros y ayuda a transformar vidas a través de nuestros programas
+                </p>
+                <div class="cta-buttons">
+                    <a href="#como-ayudar" class="btn btn-primary">
+                        <span>Quiero Colaborar</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        <span>Más Información</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ EQUIPO SECTION ============ -->
+    <section class="equipo" id="equipo">
+        <div class="equipo-container">
+            
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <span class="section-label">Conoce a Nuestro Equipo</span>
+                <h2 class="section-title">
+                    El Corazón de <span class="title-highlight">FUNDAMENTE</span>
+                </h2>
+                <p class="section-description">
+                    Profesionales comprometidos que dedican su talento y pasión para transformar 
+                    vidas en nuestra comunidad
+                </p>
+            </div>
+
+            <!-- Grid del equipo -->
+            <div class="equipo-grid">
+                
+                <!-- Miembro 1: Clara Inés Estacio Saavedra -->
+                <article class="team-member" data-member="clara">
+                    <div class="member-card">
+                        <div class="member-image-wrapper">
+                            <img src="./public/img/team/clara-estacio.jpg" alt="Clara Inés Estacio Saavedra" class="member-image">
+                            <div class="member-overlay">
+                                <button class="btn-ver-perfil" data-modal="clara">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="m21 21-4.35-4.35"/>
+                                    </svg>
+                                    <span>Ver Perfil Completo</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Clara Inés Estacio Saavedra</h3>
+                            <p class="member-role">Ingeniera Industrial</p>
+                            <div class="member-specialty">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                </svg>
+                                <span>Coordinación General & Estrategia</span>
+                            </div>
+                            
+                            <p class="member-quote">
+                                "Mi compromiso es crear oportunidades donde antes solo había limitaciones, 
+                                construyendo puentes hacia un futuro mejor para nuestros niños."
+                            </p>
+                            
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-value">10+</span>
+                                    <span class="stat-label">Años de experiencia</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">500+</span>
+                                    <span class="stat-label">Vidas impactadas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Miembro 2: Carmenza Andrade Palta -->
+                <article class="team-member" data-member="carmenza">
+                    <div class="member-card">
+                        <div class="member-image-wrapper">
+                            <img src="./public/img/team/carmenza-andrade.jpg" alt="Carmenza Andrade Palta" class="member-image">
+                            <div class="member-overlay">
+                                <button class="btn-ver-perfil" data-modal="carmenza">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="m21 21-4.35-4.35"/>
+                                    </svg>
+                                    <span>Ver Perfil Completo</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Carmenza Andrade Palta</h3>
+                            <p class="member-role">Trabajadora Social</p>
+                            <div class="member-specialty">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                <span>Desarrollo Comunitario & Bienestar Social</span>
+                            </div>
+                            
+                            <p class="member-quote">
+                                "Creo en el poder transformador de la empatía y el acompañamiento. 
+                                Cada familia tiene una historia única que merece ser escuchada y apoyada."
+                            </p>
+                            
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-value">15+</span>
+                                    <span class="stat-label">Años de experiencia</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">300+</span>
+                                    <span class="stat-label">Familias atendidas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Miembro 3: David Andrade Palta -->
+                <article class="team-member" data-member="david">
+                    <div class="member-card">
+                        <div class="member-image-wrapper">
+                            <img src="./public/img/DavidAndradePlata.jpg" alt="David Andrade Palta" class="member-image">
+                            <div class="member-overlay">
+                                <button class="btn-ver-perfil" data-modal="david">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="m21 21-4.35-4.35"/>
+                                    </svg>
+                                    <span>Ver Perfil Completo</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">David Andrade Palta</h3>
+                            <p class="member-role">Administrador de Empresas</p>
+                            <div class="member-specialty">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                                    <path d="M2 12h20"/>
+                                </svg>
+                                <span>Especialista en Administración Deportiva</span>
+                            </div>
+                            
+                            <p class="member-quote">
+                                "El deporte es más que competencia, es formación de carácter. 
+                                A través de él, enseñamos disciplina, trabajo en equipo y superación personal."
+                            </p>
+                            
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-value">8+</span>
+                                    <span class="stat-label">Años de experiencia</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">200+</span>
+                                    <span class="stat-label">Deportistas formados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Miembro 4: Oscar Aarón Lucumi-->
+                <article class="team-member" data-member="oscar">
+                    <div class="member-card">
+                        <div class="member-image-wrapper">
+                            <img src="./public/img/OscarAaronLucumi.png" alt="Oscar Aarón Lucumi" class="member-image">
+                            <div class="member-overlay">
+                                <button class="btn-ver-perfil" data-modal="oscar">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="m21 21-4.35-4.35"/>
+                                    </svg>
+                                    <span>Ver Perfil Completo</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="member-info">
+                            <h3 class="member-name">Oscar Aarón Lucumi</h3>
+                            <p class="member-role">Tecnólogo en Mercadeo</p>
+                            <div class="member-specialty">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                                <span>Comunicación & Gestión de Proyectos</span>
+                            </div>
+                            
+                            <p class="member-quote">
+                                "Contar nuestra historia es dar voz a quienes no la tienen. 
+                                Cada proyecto es una oportunidad de visibilizar el cambio que estamos generando."
+                            </p>
+                            
+                            <div class="member-stats">
+                                <div class="stat">
+                                    <span class="stat-value">6+</span>
+                                    <span class="stat-label">Años de experiencia</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">25+</span>
+                                    <span class="stat-label">Proyectos liderados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Mensaje del equipo -->
+            <div class="equipo-mensaje">
+                <div class="mensaje-content">
+                    <svg class="mensaje-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <h3 class="mensaje-title">Nuestro Compromiso Colectivo</h3>
+                    <p class="mensaje-text">
+                        Somos un equipo multidisciplinario unido por una visión común: crear oportunidades 
+                        reales de desarrollo para los niños y niñas de Ciudad Córdoba. Cada uno desde su 
+                        experticia aporta a un objetivo mayor: construir un futuro donde todos los niños 
+                        tengan acceso a educación de calidad, espacios seguros de recreación y el apoyo 
+                        necesario para alcanzar su máximo potencial.
+                    </p>
+                    <div class="mensaje-firma">
+                        <p>Con compromiso y dedicación,</p>
+                        <p class="firma-nombre">El Equipo FUNDAMENTE</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Modales de perfil completo (opcional para expansión futura) -->
+        <div class="modal-overlay" id="modal-overlay"></div>
+
+    </section>
+
+    <!-- ============ GALERÍA SECTION - AISLADA ============ -->
+    <section class="fundamente-galeria" id="galeria">
+        <div class="fundamente-galeria-wrapper">
+            
+            <!-- Encabezado único de galería -->
+            <div class="fundamente-galeria-header">
+                <span class="fundamente-galeria-badge">Nuestros Momentos</span>
+                <h2 class="fundamente-galeria-titulo">
+                    Galería de <span class="fundamente-galeria-highlight">Experiencias</span>
+                </h2>
+                <p class="fundamente-galeria-subtitulo">
+                    Capturando los momentos que transforman vidas. Cada imagen cuenta una historia 
+                    de esperanza, esfuerzo y superación en nuestra comunidad
+                </p>
+            </div>
+
+            <!-- Grid de imágenes -->
+            <div class="fundamente-galeria-grid" id="fundamenteGaleriaGrid">
+                <!-- Las imágenes/videos se cargarán dinámicamente aquí -->
+            </div>
+
+            <!-- Botón Ver Más -->
+            <div class="fundamente-galeria-acciones">
+                <button class="fundamente-btn-mas" id="fundamenteBtnMas">
+                    <svg class="fundamente-icono-btn" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                    <span class="fundamente-texto-btn">Ver Más Fotos</span>
+                </button>
+            </div>
+
+            <!-- Mensaje Instagram -->
+            <div class="fundamente-instagram-box" id="fundamenteInstagramBox" style="display: none;">
+                <div class="fundamente-instagram-icono">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="fundamente-instagram-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f09433;stop-opacity:1" />
+                                <stop offset="25%" style="stop-color:#e6683c;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#dc2743;stop-opacity:1" />
+                                <stop offset="75%" style="stop-color:#cc2366;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#bc1888;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#fundamente-instagram-gradient)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </div>
+                <h3>¡Descubre más en Instagram!</h3>
+                <p>Síguenos para ver todas nuestras actividades, eventos y momentos especiales con la comunidad</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal de Video - AISLADO -->
+    <div class="fundamente-video-modal" id="fundamenteVideoModal">
+        <button class="fundamente-video-cerrar" id="fundamenteVideoCerrar" aria-label="Cerrar video">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="fundamente-video-contenedor">
+            <video id="fundamenteVideoPlayer" controls>
+                <source src="" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+        </div>
+    </div>
+
+    <!-- ============ CÓMO AYUDAR SECTION ============ -->
+    <section class="como-ayudar" id="como-ayudar">
+        <div class="como-ayudar-container">
+            
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <span class="section-label">Sé Parte del Cambio</span>
+                <h2 class="section-title">
+                    ¿Cómo Puedes <span class="title-highlight">Ayudar</span>?
+                </h2>
+                <p class="section-description">
+                    Tu apoyo transforma vidas. Cada donación, sin importar su tamaño, 
+                    hace la diferencia en la vida de los niños de Ciudad Córdoba
+                </p>
+            </div>
+
+            <!-- Opciones de donación -->
+            <div class="donacion-opciones">
+                <h3 class="opciones-titulo">Selecciona qué deseas donar:</h3>
+                
+                <div class="opciones-grid">
+                    <!-- Opción: Comida -->
+                    <div class="opcion-card" data-tipo="comida">
+                        <div class="opcion-icono comida">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                <line x1="6" y1="1" x2="6" y2="4"/>
+                                <line x1="10" y1="1" x2="10" y2="4"/>
+                                <line x1="14" y1="1" x2="14" y2="4"/>
+                            </svg>
+                        </div>
+                        <h4 class="opcion-titulo">Alimentos</h4>
+                        <p class="opcion-descripcion">
+                            Ayuda a combatir el hambre donando alimentos no perecederos
+                        </p>
+                        <button class="btn-seleccionar" data-tipo="comida">
+                            <span>Seleccionar</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Opción: Medicamentos -->
+                    <div class="opcion-card" data-tipo="medicamentos">
+                        <div class="opcion-icono medicamentos">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
+                        <h4 class="opcion-titulo">Medicamentos</h4>
+                        <p class="opcion-descripcion">
+                            Dona medicinas básicas para el botiquín comunitario
+                        </p>
+                        <button class="btn-seleccionar" data-tipo="medicamentos">
+                            <span>Seleccionar</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Opción: Dinero -->
+                    <div class="opcion-card" data-tipo="dinero">
+                        <div class="opcion-icono dinero">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h4 class="opcion-titulo">Dinero</h4>
+                        <p class="opcion-descripcion">
+                            Contribuye económicamente para sostener nuestros programas
+                        </p>
+                        <button class="btn-seleccionar" data-tipo="dinero">
+                            <span>Seleccionar</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Opción: Ropa -->
+                    <div class="opcion-card" data-tipo="ropa">
+                        <div class="opcion-icono ropa">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+                            </svg>
+                        </div>
+                        <h4 class="opcion-titulo">Ropa</h4>
+                        <p class="opcion-descripcion">
+                            Dona ropa en buen estado para niños y familias
+                        </p>
+                        <button class="btn-seleccionar" data-tipo="ropa">
+                            <span>Seleccionar</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Opción: Otra -->
+                    <div class="opcion-card" data-tipo="otra">
+                        <div class="opcion-icono otra">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h4 class="opcion-titulo">Otra Donación</h4>
+                        <p class="opcion-descripcion">
+                            ¿Tienes algo más para donar? Cuéntanos qué es
+                        </p>
+                        <button class="btn-seleccionar" data-tipo="otra">
+                            <span>Seleccionar</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de donación -->
+            <div class="formulario-donacion" id="formularioDonacion" style="display: none;">
+                <button class="btn-volver" id="btnVolver">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span>Volver</span>
+                </button>
+
+                <div class="formulario-header">
+                    <div class="formulario-icono" id="formularioIcono"></div>
+                    <h3 class="formulario-titulo">Donación de <span id="tipoDonacionTexto"></span></h3>
+                    <p class="formulario-subtitulo" id="formularioSubtitulo"></p>
+                </div>
+
+                <form class="formulario" id="formDonacion">
+                    <div class="form-group">
+                        <label for="nombreDonante" class="form-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                            Tu Nombre Completo
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nombreDonante" 
+                            class="form-input" 
+                            placeholder="Ej: Juan Pérez García"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detallesDonacion" class="form-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                            Detalles de tu Donación
+                        </label>
+                        <textarea 
+                            id="detallesDonacion" 
+                            class="form-textarea" 
+                            rows="4"
+                            placeholder="Ej: 5 kg de arroz, 3 paquetes de pasta, aceite..."
+                            required
+                        ></textarea>
+                        <small class="form-help">Especifica qué vas a donar (cantidad, tipo, estado, etc.)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombreBeneficiario" class="form-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                            A Nombre de Quién (Opcional)
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nombreBeneficiario" 
+                            class="form-input" 
+                            placeholder="Ej: En memoria de mi abuela María"
+                        >
+                        <small class="form-help">Si quieres dedicar tu donación a alguien especial</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensajeAdicional" class="form-label">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            Mensaje Adicional (Opcional)
+                        </label>
+                        <textarea 
+                            id="mensajeAdicional" 
+                            class="form-textarea" 
+                            rows="3"
+                            placeholder="¿Algo más que quieras decirnos?"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar-whatsapp">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Contactar por WhatsApp</span>
+                    </button>
+
+                    <p class="form-info">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                        Al hacer click serás redirigido a WhatsApp donde podremos coordinar los detalles de tu donación
+                    </p>
+                </form>
+            </div>
+
+            <!-- Información adicional -->
+            <div class="info-adicional">
+                <div class="info-card">
+                    <div class="info-icono">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h4>Proceso Sencillo</h4>
+                    <p>Selecciona qué donar, completa el formulario y te contactaremos por WhatsApp para coordinar</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icono">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>100% Transparente</h4>
+                    <p>Cada donación es registrada y podrás recibir evidencia de cómo ayudó a la comunidad</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icono">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h4>Impacto Real</h4>
+                    <p>Tu donación llega directamente a las familias que más lo necesitan en Ciudad Córdoba</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ CONTACTO SECTION ============ -->
+    <section class="contacto" id="contacto">
+        <div class="contacto-container">
+            
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <span class="section-label">Hablemos</span>
+                <h2 class="section-title">
+                    ¿Tienes Preguntas? <span class="title-highlight">Contáctanos</span>
+                </h2>
+                <p class="section-description">
+                    Estamos aquí para responder todas tus dudas. Escríbenos y nos pondremos 
+                    en contacto contigo lo antes posible
+                </p>
+            </div>
+
+            <!-- Contenido principal en dos columnas -->
+            <div class="contacto-content">
+                
+                <!-- Columna izquierda: Información de contacto -->
+                <div class="contacto-info-wrapper">
+                    
+                    <!-- Tarjeta de WhatsApp destacada -->
+                    <div class="whatsapp-card-destacada">
+                        <div class="whatsapp-icono-grande">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </div>
+                        <h3>Chatea con nosotros</h3>
+                        <p class="whatsapp-numero">+57 321 455 4594</p>
+                        <p class="whatsapp-descripcion">
+                            Respuesta rápida de Lunes a Viernes<br>
+                            9:00 AM - 5:00 PM
+                        </p>
+                        <a href="#" class="btn-whatsapp-grande" id="btnWhatsAppContacto">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <span>Abrir WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <!-- Otros métodos de contacto -->
+                    <div class="otros-contactos">
+                        <h4>Otros canales de contacto</h4>
+                        
+                        <div class="contacto-item-simple">
+                            <div class="contacto-icono-simple">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contacto-texto-simple">
+                                <span class="contacto-label">Email</span>
+                                <a href="mailto:contacto@fundamente.org">contacto@fundamente.org</a>
+                            </div>
+                        </div>
+
+                        <div class="contacto-item-simple">
+                            <div class="contacto-icono-simple">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contacto-texto-simple">
+                                <span class="contacto-label">Ubicación</span>
+                                <p>Barrio Ciudad Córdoba<br>Comuna 15, Cali - Colombia</p>
+                            </div>
+                        </div>
+
+                        <div class="contacto-item-simple">
+                            <div class="contacto-icono-simple">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="contacto-texto-simple">
+                                <span class="contacto-label">Horario</span>
+                                <p>Lunes a Viernes<br>9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Redes sociales -->
+                    <div class="redes-sociales-contacto">
+                        <h4>Síguenos en redes</h4>
+                        <div class="redes-grid">
+                            <a href="https://facebook.com/fundamente" target="_blank" class="red-social-link facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/fundamenteorg" target="_blank" class="red-social-link instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/fundamente" target="_blank" class="red-social-link twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Columna derecha: Formulario de contacto -->
+                <div class="contacto-form-wrapper">
+                    <form class="form-contacto" id="formContacto">
+                        
+                        <div class="form-group">
+                            <label for="nombreContacto" class="form-label">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                Tu Nombre
+                            </label>
+                            <input 
+                                type="text" 
+                                id="nombreContacto" 
+                                class="form-input" 
+                                placeholder="Ej: Juan Pérez"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailContacto" class="form-label">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                Tu Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="emailContacto" 
+                                class="form-input" 
+                                placeholder="tu@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefonoContacto" class="form-label">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                Teléfono (Opcional)
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="telefonoContacto" 
+                                class="form-input" 
+                                placeholder="+57 321 123 4567"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asuntoContacto" class="form-label">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10 9 9 9 8 9"/>
+                                </svg>
+                                Asunto
+                            </label>
+                            <select id="asuntoContacto" class="form-input" required>
+                                <option value="">Selecciona un tema...</option>
+                                <option value="informacion-programas">Información sobre programas</option>
+                                <option value="voluntariado">Quiero ser voluntario</option>
+                                <option value="donaciones">Consultas sobre donaciones</option>
+                                <option value="alianzas">Propuesta de alianza</option>
+                                <option value="otro">Otro tema</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensajeContacto" class="form-label">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                                Mensaje
+                            </label>
+                            <textarea 
+                                id="mensajeContacto" 
+                                class="form-textarea" 
+                                rows="5"
+                                placeholder="Cuéntanos, ¿en qué podemos ayudarte?"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar-contacto">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            <span>Enviar por WhatsApp</span>
+                        </button>
+
+                        <p class="form-info-contacto">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="16" x2="12" y2="12"/>
+                                <line x1="12" y1="8" x2="12.01" y2="8"/>
+                            </svg>
+                            Tu mensaje será enviado directamente a nuestro WhatsApp
+                        </p>
+                    </form>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-content">
+            
+            <!-- Columna 1: Logo y descripción -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="./public/img/logo-fundamento.png" alt="FUNDAMENTE Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">FUNDAMENTE</span>
+                </div>
+                <p class="footer-descripcion">
+                    Transformando vidas en Ciudad Córdoba a través de educación, deporte, 
+                    recreación y cultura desde 2022.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces rápidos -->
+            <div class="footer-col">
+                <h4 class="footer-titulo">Enlaces Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#equipo">Nuestro Equipo</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Contacto -->
+            <div class="footer-col">
+                <h4 class="footer-titulo">Contacto</h4>
+                <ul class="footer-contacto">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Ciudad Córdoba, Cali
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        +57 321 455 4594
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        contacto@fundamente.org
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Redes sociales -->
+            <div class="footer-col">
+                <h4 class="footer-titulo">Síguenos</h4>
+                <div class="footer-redes">
+                    <a href="https://facebook.com/fundamente" target="_blank" class="footer-red-social">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/fundamenteorg" target="_blank" class="footer-red-social">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/fundamente" target="_blank" class="footer-red-social">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+    </svg>
+    </a>
+    </div>
+    </div>
+        </div>
+
+            <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2022-2026 FUNDAMENTE. Todos los derechos reservados.</p>
+    </div>
+
+    </div>
+    </footer>
+
+    <script src="./data/programas.js"></script>
+    <script src="./data/gallery.js"></script>
+    <script src="./data/info.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

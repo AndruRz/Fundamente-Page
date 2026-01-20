@@ -109,11 +109,13 @@ document.addEventListener('click', (e) => {
         });
     }
 });
-
 // === PARALLAX EFFECT ===
 const parallaxLayers = document.querySelectorAll('.parallax-layer');
 
 window.addEventListener('scroll', () => {
+    // Solo aplicar parallax en pantallas grandes
+    if (window.innerWidth <= 768) return;
+    
     const scrolled = window.pageYOffset;
     
     parallaxLayers.forEach(layer => {
@@ -1422,11 +1424,17 @@ class FundamenteGallery {
                 this.openVideoModal(item.src);
                 this.trackEvent('Galería', 'Click Video', item.descripcion);
             });
+            
+            // Añadir cursor pointer solo para videos
+            galleryItem.style.cursor = 'pointer';
         } else {
-            // Click para abrir lightbox de imagen
-            galleryItem.addEventListener('click', () => {
-                this.openImageLightbox(item.src, item.alt);
-                this.trackEvent('Galería', 'Click Imagen', item.descripcion);
+            // Para imágenes: NO hacer nada al hacer click
+            // Simplemente mostrar sin interacción
+            galleryItem.style.cursor = 'default';
+            
+            // Opcional: puedes agregar un efecto hover sutil
+            galleryItem.addEventListener('mouseenter', () => {
+                // Solo un efecto visual suave, sin funcionalidad
             });
         }
     }
@@ -1614,7 +1622,7 @@ console.log(`Total de items: ${typeof galleryData !== 'undefined' ? galleryData.
    ============================================ */
 
 // === CONFIGURACIÓN ===
-const WHATSAPP_NUMBER = '573214554594';
+const WHATSAPP_NUMBER = '573216818455';
 const WHATSAPP_BASE_URL = 'https://wa.me/';
 
 // === DATOS DE TIPOS DE DONACIÓN ===
@@ -2077,7 +2085,7 @@ console.log(`📱 WhatsApp configurado: ${WHATSAPP_NUMBER}`);
    ============================================ */
 
 // === CONFIGURACIÓN ===
-const WHATSAPP_CONTACTO = '573214554594';
+const WHATSAPP_CONTACTO = '573216818455';
 const WHATSAPP_URL_BASE = 'https://wa.me/';
 
 // === ELEMENTOS DEL DOM ===
@@ -2587,7 +2595,7 @@ console.log('📞 Sistema de contacto cargado correctamente');
    ============================================ */
 
 // === CONFIGURACIÓN ===
-const WHATSAPP_APOYO = '573214554594';
+const WHATSAPP_APOYO = '573216818455';
 
 // === SETUP BOTÓN APOYAR AHORA ===
 function setupBotonApoyarAhora() {

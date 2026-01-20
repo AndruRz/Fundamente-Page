@@ -3,7 +3,7 @@
    ============================================ */
 
 // === CONFIGURACIÓN ===
-const WHATSAPP_NUMBER = '573214554594';
+const WHATSAPP_NUMBER = '573216818455';
 let programaActual = null;
 
 // === MAPEO DE COLORES POR PROGRAMA ===
@@ -60,7 +60,6 @@ function cargarPrograma() {
     renderObjetivos(programa);
     renderProyectos(programa);
     renderActividades(programa);
-    renderComoAyudar(programa);
 
     // Actualizar título de la página
     document.getElementById('page-title').textContent = `${programa.nombre} - FUNDAMENTE`;
@@ -190,26 +189,6 @@ function renderActividades(programa) {
                     <span class="actividad-info-value">${actividad.edades}</span>
                 </div>
             </div>
-        </div>
-    `).join('');
-}
-
-// === RENDERIZAR CÓMO AYUDAR ===
-function renderComoAyudar(programa) {
-    const container = document.getElementById('ayudarGrid');
-    
-    const secciones = [
-        { titulo: 'Voluntariado', lista: programa.comoAyudar.voluntariado },
-        { titulo: 'Donaciones', lista: programa.comoAyudar.donaciones },
-        { titulo: 'Alianzas', lista: programa.comoAyudar.alianzas }
-    ];
-    
-    container.innerHTML = secciones.map(seccion => `
-        <div class="ayudar-card">
-            <h4>${seccion.titulo}</h4>
-            <ul class="ayudar-lista">
-                ${seccion.lista.map(item => `<li>${item}</li>`).join('')}
-            </ul>
         </div>
     `).join('');
 }
@@ -366,12 +345,6 @@ function setupSmoothScroll() {
             }
         });
     });
-}
-
-// === TRACKING (OPCIONAL) ===
-function trackEvent(category, action, label) {
-    console.log(`📊 Event: ${category} - ${action} - ${label}`);
-    // Aquí puedes integrar Google Analytics, Mixpanel, etc.
 }
 
 // === INICIALIZACIÓN ===

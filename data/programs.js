@@ -363,7 +363,7 @@ const programasData = {
         hero: {
             titulo: 'Deporte que Forma Valores',
             subtitulo: 'Promovemos la actividad física, el trabajo en equipo y la disciplina como herramientas fundamentales para el desarrollo integral de niños y jóvenes',
-            imagen: './public/img/programas/deporte/hero-deporte.jpg',
+            imagen: '../public/img/ProgramaDeporte.jpg',
             estadisticas: [
                 { numero: 150, label: 'Deportistas activos', sufijo: '+' },
                 { numero: 8, label: 'Disciplinas ofrecidas', sufijo: '' },

@@ -3,6 +3,7 @@
    ============================================ */
 
 const programasData = {
+    /*
     // ========================================
     // PROGRAMA 1: EDUCACIÓN
     // ========================================
@@ -349,10 +350,12 @@ const programasData = {
             horarioAtencion: 'Lunes a Viernes, 2:00 PM - 6:00 PM'
         }
     },
+    */
 
     // ========================================
     // PROGRAMA 2: DEPORTE
     // ========================================
+
     deporte: {
         // Información básica
         id: 'deporte',
@@ -362,318 +365,165 @@ const programasData = {
         // Hero de la página
         hero: {
             titulo: 'Deporte que Forma Valores',
-            subtitulo: 'Promovemos la actividad física, el trabajo en equipo y la disciplina como herramientas fundamentales para el desarrollo integral de niños y jóvenes',
+            subtitulo: 'A través del Club Deportivo Dynamo, promovemos la actividad física, el trabajo en equipo y la disciplina como herramientas fundamentales para el desarrollo integral de niños y jóvenes',
             imagen: '../public/img/ProgramaDeporte.jpg',
             estadisticas: [
-                { numero: 150, label: 'Deportistas activos', sufijo: '+' },
-                { numero: 8, label: 'Disciplinas ofrecidas', sufijo: '' },
-                { numero: 20, label: 'Entrenamientos semanales', sufijo: '' }
+                { numero: 200, label: 'Deportistas beneficiados', sufijo: '+' },
+                { numero: 30, label: 'Categorías activas', sufijo: '+' },
+                { numero: 2018, label: 'Año de fundación', sufijo: '' }
             ]
         },
 
         // Resumen del programa
         resumen: {
-            mision: 'Alejar a los niños y jóvenes de entornos de riesgo mediante la práctica deportiva, fomentando hábitos saludables, disciplina, respeto y trabajo en equipo que contribuyan a su desarrollo integral.',
-            vision: 'Convertirnos en la escuela deportiva de referencia en el Distrito de Aguablanca, formando no solo deportistas de alto rendimiento, sino ciudadanos ejemplares con valores sólidos.',
-            impacto: 'Desde 2022, hemos mantenido a más de 150 jóvenes activos en el deporte, reduciendo su exposición a situaciones de riesgo en un 70% y mejorando su salud física y emocional de manera significativa.'
+            mision: 'La Fundación Fundamente contribuye al Club Deportivo Dynamo subsidiando a más de 200 deportistas, permitiéndoles acceder a entrenamientos de manera totalmente gratuita o parcial, para que puedan desarrollar actividades deportivas y utilizar su tiempo libre de manera positiva y constructiva.',
+            vision: 'Consolidar al Club Deportivo Dynamo como referente deportivo en la región, formando deportistas integrales con valores sólidos que contribuyan al desarrollo de sus comunidades.',
+            impacto: 'Desde 2018, el Club Deportivo Dynamo ha impactado la vida de más de 200 jóvenes, brindándoles oportunidades deportivas que promueven el desarrollo integral, alejan de entornos de riesgo y fomentan hábitos saludables y disciplina.'
         },
 
         // Objetivos específicos
         objetivos: [
             {
                 icono: 'shield',
-                titulo: 'Alejar de Entornos de Riesgo',
-                descripcion: 'Brindar espacios seguros donde los jóvenes ocupen su tiempo libre de manera positiva, alejándolos de la violencia y las drogas.'
+                titulo: 'Acceso Deportivo Inclusivo',
+                descripcion: 'Garantizar que niños y jóvenes accedan a programas deportivos de calidad mediante subsidios totales o parciales, sin importar su condición económica.'
             },
             {
                 icono: 'heart',
-                titulo: 'Fomentar Hábitos Saludables',
-                descripcion: 'Promover la actividad física regular, alimentación balanceada y cuidado del cuerpo como estilo de vida.'
+                titulo: 'Desarrollo de Tiempo Libre Positivo',
+                descripcion: 'Proporcionar espacios seguros donde los jóvenes ocupen su tiempo libre en actividades deportivas que promuevan valores y hábitos saludables.'
             },
             {
                 icono: 'users',
-                titulo: 'Desarrollar Trabajo en Equipo',
-                descripcion: 'Enseñar valores de cooperación, solidaridad y respeto mediante deportes colectivos e individuales.'
+                titulo: 'Formación Integral',
+                descripcion: 'Combinar la formación deportiva con el desarrollo de valores como el respeto, la disciplina, el trabajo en equipo y la responsabilidad.'
             },
             {
                 icono: 'trophy',
-                titulo: 'Formar Líderes Deportivos',
-                descripcion: 'Identificar y potenciar talentos deportivos que puedan representar a la comunidad en competencias.'
+                titulo: 'Desarrollo de Talento Deportivo',
+                descripcion: 'Identificar y potenciar talentos deportivos en más de 30 categorías, brindando oportunidades de crecimiento y competencia.'
             }
         ],
 
         // Proyectos destacados
         proyectosDestacados: [
             {
-                id: 'escuela-futbol',
-                nombre: 'Escuela de Fútbol "Águilas de Córdoba"',
-                descripcion: 'Programa de formación futbolística que combina entrenamiento técnico con valores y acompañamiento psicosocial para niños y jóvenes de la comunidad.',
-                periodo: '2022 - Actualidad',
-                beneficiarios: 85,
+                id: 'club-dynamo',
+                nombre: 'Club Deportivo Dynamo',
+                descripcion: 'Proyecto deportivo integral fundado en 2018 que ofrece más de 30 categorías deportivas, subsidiando a más de 200 deportistas para garantizar su acceso a entrenamientos y desarrollo deportivo de calidad.',
+                periodo: '2018 - Actualidad',
+                beneficiarios: 200,
                 logros: [
-                    '3 equipos en diferentes categorías (sub-10, sub-13, sub-16)',
-                    'Campeones torneo intercomunas 2023',
-                    '12 jugadores seleccionados para pruebas en clubes profesionales',
-                    'Participación en 15+ torneos locales',
-                    '0 casos de deserción por violencia en participantes'
+                    'Más de 30 categorías deportivas activas',
+                    'Más de 200 deportistas subsidiados (totalmente o parcialmente)',
+                    'Proyecto consolidado desde 2018',
+                    'Formación deportiva integral con énfasis en valores',
+                    'Espacios seguros para el uso positivo del tiempo libre'
                 ],
-                imagen: './public/img/programas/deporte/proyecto-futbol.jpg',
-                galeria: [
-                    './public/img/programas/deporte/futbol-1.jpg',
-                    './public/img/programas/deporte/futbol-2.jpg',
-                    './public/img/programas/deporte/futbol-3.jpg',
-                    './public/img/programas/deporte/futbol-4.jpg'
-                ],
-                testimonios: [
-                    {
-                        nombre: 'Jorge Henao',
-                        rol: 'Entrenador - Licenciado en Educación Física',
-                        texto: 'Lo más gratificante no es ganar partidos, sino ver cómo estos niños llegan con problemas de conducta y en 6 meses son completamente diferentes. El fútbol los transforma.',
-                        foto: './public/img/testimonios/jorge-henao.jpg',
-                        video: './public/video/testimonios/jorge-futbol.mp4'
-                    },
-                    {
-                        nombre: 'Kevin Moreno, 14 años',
-                        rol: 'Capitán Sub-16',
-                        texto: 'Antes andaba en la calle sin hacer nada. Ahora entreno todos los días y sueño con ser futbolista profesional. Mis profesores dicen que hasta mejoré en el colegio.',
-                        foto: './public/img/testimonios/kevin-moreno.jpg',
-                        video: null
-                    },
-                    {
-                        nombre: 'Luz Marina Perea',
-                        rol: 'Madre de beneficiario',
-                        texto: 'Mi hijo cambió totalmente desde que entró a las Águilas. Ahora es responsable, hace sus tareas y lo más importante, está alejado de las malas amistades.',
-                        foto: './public/img/testimonios/luz-marina.jpg',
-                        video: null
-                    }
-                ],
-                metricas: {
-                    participacion: 96,
-                    satisfaccion: 94,
-                    mejora: 88,
-                    retencion: 91
-                }
-            },
-
-            {
-                id: 'baloncesto-femenino',
-                nombre: 'Baloncesto Femenino "Leonas del Distrito"',
-                descripcion: 'Escuela de baloncesto exclusiva para niñas y jóvenes, promoviendo el empoderamiento femenino, autoestima y liderazgo a través del deporte.',
-                periodo: '2023 - Actualidad',
-                beneficiarios: 45,
-                logros: [
-                    '2 equipos competitivos (sub-14 y sub-17)',
-                    'Subcampeonas Copa Aguablanca 2024',
-                    'Programa de mentoría: deportistas universitarias con niñas',
-                    '100% de participantes mejoraron su autoestima',
-                    'Alianza con Liga Vallecaucana de Baloncesto'
-                ],
-                imagen: './public/img/programas/deporte/proyecto-baloncesto.jpg',
-                galeria: [
-                    './public/img/programas/deporte/baloncesto-1.jpg',
-                    './public/img/programas/deporte/baloncesto-2.jpg',
-                    './public/img/programas/deporte/baloncesto-3.jpg',
-                    './public/img/programas/deporte/baloncesto-4.jpg'
-                ],
-                testimonios: [
-                    {
-                        nombre: 'Daniela Mosquera',
-                        rol: 'Entrenadora - Ex-jugadora profesional',
-                        texto: 'Este programa no solo enseña baloncesto, enseña a las niñas que pueden lograr lo que se propongan. Ver su evolución como deportistas y como personas es increíble.',
-                        foto: './public/img/testimonios/daniela-mosquera.jpg',
-                        video: './public/video/testimonios/daniela-leonas.mp4'
-                    },
-                    {
-                        nombre: 'Valentina Torres, 15 años',
-                        rol: 'Jugadora destacada',
-                        texto: 'Antes era muy tímida. El basquet me enseñó a creer en mí misma. Ahora soy capitana del equipo y me siento capaz de todo.',
-                        foto: './public/img/testimonios/valentina-torres.jpg',
-                        video: null
-                    }
-                ],
-                metricas: {
-                    participacion: 98,
-                    satisfaccion: 97,
-                    mejora: 92,
-                    retencion: 95
-                }
-            },
-
-            {
-                id: 'multideportivo',
-                nombre: 'Programa Multideportivo "Sábados Activos"',
-                descripcion: 'Jornadas deportivas los sábados donde los niños pueden explorar diferentes disciplinas: atletismo, voleibol, patinaje, ultimate frisbee y más.',
-                periodo: '2022 - Actualidad',
-                beneficiarios: 70,
-                logros: [
-                    'Rotación mensual de 6 disciplinas deportivas',
-                    '15 niños descubrieron su vocación deportiva',
-                    'Creación de equipo de ultimate frisbee (único en la comuna)',
-                    'Participación en olimpiadas barriales'
-                ],
-                imagen: './public/img/programas/deporte/proyecto-multideportivo.jpg',
-                galeria: [
-                    './public/img/programas/deporte/multi-1.jpg',
-                    './public/img/programas/deporte/multi-2.jpg',
-                    './public/img/programas/deporte/multi-3.jpg',
-                    './public/img/programas/deporte/multi-4.jpg'
-                ],
-                testimonios: [
-                    {
-                        nombre: 'Camilo Vargas',
-                        rol: 'Coordinador deportivo',
-                        texto: 'La idea es que todos los niños encuentren un deporte que les apasione. No todos nacieron para el fútbol, algunos son velocistas, otros grandes en voleibol.',
-                        foto: './public/img/testimonios/camilo-vargas.jpg',
-                        video: null
-                    }
-                ],
-                metricas: {
-                    participacion: 89,
-                    satisfaccion: 90,
-                    mejora: 85,
-                    retencion: 87
-                }
+                imagen: '../public/img/clubdeportivodynamo.jpg',
+                enlaceWeb: 'https://clubdeportivodynamo.netlify.app/',
             }
         ],
 
         // Actividades regulares
         actividades: [
-            {
-                nombre: 'Entrenamiento de Fútbol',
-                frecuencia: 'Lunes, Miércoles y Viernes',
-                horario: '4:00 PM - 6:00 PM',
-                descripcion: 'Práctica técnica, táctica y partidos formativos para todas las categorías.',
-                cupos: 90,
-                edades: '8-17 años'
-            },
-            {
-                nombre: 'Baloncesto Femenino',
-                frecuencia: 'Martes y Jueves',
-                horario: '4:30 PM - 6:30 PM',
-                descripcion: 'Entrenamiento especializado en fundamentos y estrategia de baloncesto.',
-                cupos: 50,
-                edades: '10-18 años'
-            },
-            {
-                nombre: 'Sábados Multideportivos',
-                frecuencia: 'Sábados',
-                horario: '8:00 AM - 12:00 PM',
-                descripcion: 'Exploración de diferentes deportes en jornadas recreativas.',
-                cupos: 80,
-                edades: '6-15 años'
-            },
-            {
-                nombre: 'Voleibol Mixto',
-                frecuencia: 'Miércoles y Sábados',
-                horario: '3:00 PM - 5:00 PM',
-                descripcion: 'Práctica de voleibol para niños y niñas de todos los niveles.',
-                cupos: 40,
-                edades: '10-16 años'
-            },
-            {
-                nombre: 'Acondicionamiento Físico',
-                frecuencia: 'Lunes a Viernes',
-                horario: '6:00 AM - 7:00 AM',
-                descripcion: 'Rutinas de ejercicio para mejorar condición física general.',
-                cupos: 30,
-                edades: '14-20 años'
-            }
+            // Dejar vacío según instrucciones
         ],
 
         // Recursos necesarios
         necesidades: [
             {
+                categoria: 'Subsidios Deportivos',
+                items: [
+                    'Becas completas para deportistas en situación de vulnerabilidad',
+                    'Subsidios parciales para familias de bajos recursos',
+                    'Apoyo para transporte a entrenamientos',
+                    'Cobertura de inscripciones a torneos'
+                ]
+            },
+            {
                 categoria: 'Implementos Deportivos',
                 items: [
-                    'Balones de fútbol, baloncesto y voleibol',
+                    'Equipamiento para más de 30 categorías',
                     'Uniformes deportivos',
-                    'Conos, petos y material de entrenamiento',
-                    'Redes y arcos portátiles'
+                    'Material de entrenamiento específico por disciplina',
+                    'Mantenimiento de implementos deportivos'
                 ]
             },
             {
                 categoria: 'Infraestructura',
                 items: [
-                    'Mantenimiento de cancha sintética',
-                    'Iluminación para entrenamientos nocturnos',
-                    'Graderías',
-                    'Vestidores y baños'
-                ]
-            },
-            {
-                categoria: 'Seguridad y Salud',
-                items: [
-                    'Botiquín deportivo',
-                    'Hidratación (termo y vasos)',
-                    'Seguro deportivo',
-                    'Fisioterapeuta'
+                    'Mantenimiento de instalaciones deportivas',
+                    'Espacios de entrenamiento adecuados',
+                    'Mejoras en canchas y áreas deportivas',
+                    'Vestidores y áreas de apoyo'
                 ]
             },
             {
                 categoria: 'Talento Humano',
                 items: [
-                    'Entrenadores certificados',
-                    'Preparador físico',
-                    'Psicólogo deportivo',
-                    'Nutricionista'
+                    'Entrenadores certificados por categoría',
+                    'Personal de apoyo administrativo',
+                    'Profesionales en salud deportiva',
+                    'Coordinadores de programa'
                 ]
             }
         ],
 
         // Próximos pasos y metas 2026
         futuro: {
-            titulo: 'Visión Deportiva 2026',
-            descripcion: 'Expandir nuestras disciplinas deportivas y consolidar una academia integral de formación deportiva.',
+            titulo: 'Visión Club Deportivo Dynamo 2026',
+            descripcion: 'Expandir la cobertura de subsidios y fortalecer las 30+ categorías del Club Deportivo Dynamo para impactar a más jóvenes de la región.',
             metas: [
                 {
-                    objetivo: 'Alcanzar 250 deportistas activos',
+                    objetivo: 'Alcanzar 300 deportistas subsidiados',
                     plazo: 'Diciembre 2026',
-                    progreso: 60
+                    progreso: 67
                 },
                 {
-                    objetivo: 'Inaugurar cancha de baloncesto techada',
-                    plazo: 'Julio 2026',
-                    progreso: 35
-                },
-                {
-                    objetivo: 'Crear escuela de natación',
-                    plazo: 'Octubre 2026',
-                    progreso: 15
-                },
-                {
-                    objetivo: 'Formar 5 entrenadores de la comunidad',
+                    objetivo: 'Ampliar a 40 categorías deportivas',
                     plazo: 'Agosto 2026',
-                    progreso: 40
+                    progreso: 75
+                },
+                {
+                    objetivo: 'Implementar programa de becas 100% para 100 deportistas',
+                    plazo: 'Junio 2026',
+                    progreso: 50
+                },
+                {
+                    objetivo: 'Crear fondo de sostenibilidad para subsidios',
+                    plazo: 'Octubre 2026',
+                    progreso: 30
                 }
             ],
             nuevosProyectos: [
-                'Escuela de atletismo y velocidad',
-                'Programa de natación comunitaria',
-                'Liga interna de deportes',
-                'Campamentos deportivos vacacionales',
-                'Intercambios con otras fundaciones'
+                'Programa de patrocinio deportivo empresarial',
+                'Fondo de becas deportivas permanente',
+                'Ampliación de categorías en deportes emergentes',
+                'Programa de seguimiento académico para deportistas',
+                'Red de alianzas con clubes profesionales'
             ]
         },
 
         // Cómo ayudar específicamente a este programa
         comoAyudar: {
             voluntariado: [
-                'Ser entrenador/a deportivo',
-                'Apoyar como árbitro en partidos',
-                'Organizar torneos y eventos',
-                'Acompañar en entrenamientos'
+                'Ser patrocinador de deportistas',
+                'Apoyar como mentor deportivo',
+                'Acompañamiento en actividades del club',
+                'Asesoría profesional en gestión deportiva'
             ],
             donaciones: [
-                'Balones e implementos deportivos',
-                'Uniformes y zapatos deportivos',
-                'Equipamiento de canchas',
-                'Donación para transporte a torneos'
+                'Apadrinar deportistas con subsidios mensuales',
+                'Donación de implementos deportivos',
+                'Apoyo para uniformes y equipamiento',
+                'Contribución al fondo de becas deportivas'
             ],
             alianzas: [
-                'Clubes deportivos profesionales',
-                'Universidades con programas deportivos',
-                'Empresas de implementos deportivos',
-                'Ligas deportivas regionales'
+                'Empresas interesadas en responsabilidad social deportiva',
+                'Clubes profesionales para intercambios y formación',
+                'Instituciones educativas con programas deportivos',
+                'Marcas deportivas para patrocinio de equipamiento'
             ]
         },
 
@@ -681,87 +531,70 @@ const programasData = {
         galeria: [
             {
                 tipo: 'imagen',
-                src: './public/img/programas/deporte/galeria-1.jpg',
-                alt: 'Entrenamiento de fútbol',
-                descripcion: 'Sesión de entrenamiento Águilas de Córdoba'
+                src: '../public/img/equipodynamo.jpg',
+                alt: 'Entrenamientos Club Dynamo',
+                descripcion: 'Deportistas del Club Deportivo Dynamo en acción'
             },
             {
                 tipo: 'imagen',
-                src: './public/img/programas/deporte/galeria-2.jpg',
-                alt: 'Partido de baloncesto',
-                descripcion: 'Leonas del Distrito en acción'
-            },
-            {
-                tipo: 'video',
-                src: './public/video/programas/deporte/resumen-deportivo.mp4',
-                thumbnail: './public/img/programas/deporte/video-thumb.jpg',
-                alt: 'Resumen deportivo 2024',
-                descripcion: 'Lo mejor del año deportivo 2024'
+                src: '../public/img/muultiplecategorias.jpg',
+                alt: 'Múltiples categorías',
+                descripcion: 'Más de 30 categorías deportivas activas'
             },
             {
                 tipo: 'imagen',
-                src: './public/img/programas/deporte/galeria-3.jpg',
-                alt: 'Celebración de campeonato',
-                descripcion: 'Celebrando el campeonato intercomunas'
+                src: '../public/img/impactodynamo.jpg',
+                alt: 'Club Deportivo Dynamo',
+                descripcion: 'Conoce el impacto del Club Deportivo Dynamo'
             },
             {
                 tipo: 'imagen',
-                src: './public/img/programas/deporte/galeria-4.jpg',
-                alt: 'Sábados multideportivos',
-                descripcion: 'Jornada de sábados activos'
+                src: '../public/img/niñosbeneficiados.jpg',
+                alt: 'Deportistas beneficiados',
+                descripcion: 'Más de 200 deportistas con subsidio de Fundamente'
             },
-            {
-                tipo: 'imagen',
-                src: './public/img/programas/deporte/galeria-5.jpg',
-                alt: 'Entrega de uniformes',
-                descripcion: 'Entrega de nuevos uniformes deportivos'
-            },
-            {
-                tipo: 'video',
-                src: './public/video/programas/deporte/testimonio-equipo.mp4',
-                thumbnail: './public/img/programas/deporte/video-thumb-2.jpg',
-                alt: 'Testimonios de deportistas',
-                descripcion: 'Historias de nuestros deportistas'
-            }
+
         ],
 
         // FAQs del programa
         faqs: [
             {
-                pregunta: '¿Necesito experiencia previa para participar?',
-                respuesta: 'No, aceptamos principiantes y deportistas de todos los niveles. Tenemos grupos según experiencia y edad.'
+                pregunta: '¿Qué es el Club Deportivo Dynamo?',
+                respuesta: 'Es un proyecto deportivo integral fundado en 2018 que ofrece más de 30 categorías deportivas. La Fundación Fundamente subsidia a más de 200 deportistas para que accedan a entrenamientos de calidad.'
             },
             {
-                pregunta: '¿El programa incluye uniformes?',
-                respuesta: 'Sí, proporcionamos uniformes de entrenamiento. Para competencias oficiales, gestionamos donaciones o patrocinios.'
+                pregunta: '¿Cómo funciona el subsidio de Fundamente?',
+                respuesta: 'La fundación otorga subsidios totales o parciales según la situación de cada familia, permitiendo que los deportistas entrenen sin que el factor económico sea una barrera.'
             },
             {
-                pregunta: '¿Hay exámenes médicos?',
-                respuesta: 'Realizamos valoraciones físicas básicas. Para deportes de alto rendimiento, recomendamos chequeo médico previo.'
+                pregunta: '¿Qué categorías deportivas están disponibles?',
+                respuesta: 'El Club Deportivo Dynamo cuenta con más de 30 categorías en diversas disciplinas deportivas. Visita https://clubdeportivodynamo.netlify.app/ para conocer todas las opciones disponibles.'
             },
             {
-                pregunta: '¿Participan en torneos externos?',
-                respuesta: 'Sí, nuestros equipos participan regularmente en torneos intercomunas, intercolegiales y ligas locales.'
+                pregunta: '¿Cómo puedo solicitar un subsidio deportivo?',
+                respuesta: 'Puedes comunicarte directamente con el coordinador del programa o visitar la página web del Club Deportivo Dynamo para conocer el proceso de inscripción y solicitud de subsidio.'
             },
             {
-                pregunta: '¿Qué pasa si mi hijo/a falta a entrenamientos?',
-                respuesta: 'Entendemos que pueden surgir imprevistos. Pedimos avisar con anticipación y mantener un mínimo de 80% de asistencia.'
+                pregunta: '¿Desde cuándo opera el Club Deportivo Dynamo?',
+                respuesta: 'El Club Deportivo Dynamo es un proyecto consolidado que opera desde 2018, con el respaldo constante de la Fundación Fundamente.'
             },
             {
-                pregunta: '¿Solo fútbol y baloncesto?',
-                respuesta: 'Principalmente esos dos, pero en Sábados Activos exploramos voleibol, atletismo, ultimate frisbee y más.'
+                pregunta: '¿Puedo apoyar como patrocinador?',
+                respuesta: 'Sí, empresas y personas naturales pueden apadrinar deportistas o contribuir al fondo de subsidios. Contáctanos para conocer las opciones de patrocinio.'
             }
         ],
 
         // Contacto específico del programa
         contacto: {
-            coordinador: 'David Andrade Palta',
+            coordinador: 'Oscar Aaron Lucumi',
             email: 'deporte@fundamente.org',
-            telefono: '+57 321 455 4594',
-            horarioAtencion: 'Lunes a Sábado, 3:00 PM - 7:00 PM'
+            telefono: '+57 318 753 1571',
+            horarioAtencion: 'Lunes a Sábado, 3:00 PM - 7:00 PM',
+            webClub: 'https://clubdeportivodynamo.netlify.app/'
         }
-    },
+    }
 
+    /*
     // ========================================
     // PROGRAMA 3: RECREACIÓN
     // ========================================
@@ -1194,7 +1027,10 @@ const programasData = {
         }
     },
 
-// ========================================
+    */
+
+    /*
+    // ========================================
     // PROGRAMA 4: MEDIO AMBIENTE
     // ========================================
     medioambiente: {
@@ -1630,6 +1466,7 @@ const programasData = {
             horarioAtencion: 'Martes a Sábado, 9:00 AM - 1:00 PM'
         }
     }
+    */
 };
 
 // Exportar para uso en otras partes del sitio

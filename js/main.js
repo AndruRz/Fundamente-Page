@@ -185,10 +185,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         
         const target = document.querySelector(href);
         
+        // Solo hacer smooth scroll si el target existe en la página actual
         if (target) {
             e.preventDefault();
             
-            const navbarHeight = navbar.offsetHeight;
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
             const targetPosition = target.offsetTop - navbarHeight;
             
             window.scrollTo({
@@ -196,6 +197,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
         }
+        // Si el target NO existe (estás en otra página), dejar que navegue normalmente
+        // El navegador cargará index.html y automáticamente hará scroll al hash
     });
 });
 
@@ -279,12 +282,26 @@ window.addEventListener('scroll', highlightNavOnScroll);
 
 // === PRELOADER (OPCIONAL) ===
 window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-    
-    // Iniciar animaciones del hero
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        heroContent.classList.add('animated');
+    // Si hay un hash en la URL al cargar
+    if (window.location.hash) {
+        const hash = window.location.hash;
+        const target = document.querySelector(hash);
+        
+        if (target) {
+            // LIMPIAR EL HASH INMEDIATAMENTE (sin delay)
+            history.replaceState(null, null, window.location.pathname);
+            
+            // Luego hacer scroll
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            const targetPosition = target.offsetTop - navbarHeight;
+            
+            setTimeout(() => {
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
     }
 });
 

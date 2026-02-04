@@ -41,7 +41,6 @@ function cargarPrograma() {
         return;
     }
 
-    // Buscar en programasData
     const programa = programasData[programaId];
 
     if (!programa) {
@@ -51,22 +50,26 @@ function cargarPrograma() {
 
     programaActual = programa;
 
-    // Aplicar colores del programa
     aplicarColoresPrograma(programaId);
 
-    // Renderizar secciones
+    // Renderizar TODAS las secciones
     renderHero(programa);
     renderResumen(programa);
     renderObjetivos(programa);
     renderProyectos(programa);
     renderActividades(programa);
+    renderNecesidades(programa);           // ← NUEVO
+    renderFuturo(programa);                // ← NUEVO
+    renderComoAyudar(programa);            // ← NUEVO
+    renderGaleria(programa);               // ← NUEVO
+    renderFaqs(programa);                  // ← NUEVO
+    renderContactoEspecifico(programa);    // ← NUEVO
+    setupBotonesContacto(programa);        // ← NUEVO
 
-    // Actualizar título de la página
     document.getElementById('page-title').textContent = `${programa.nombre} - FUNDAMENTE`;
 
     console.log('✅ Programa cargado:', programaId);
 }
-
 // === APLICAR COLORES DEL PROGRAMA ===
 function aplicarColoresPrograma(programaId) {
     const colores = coloresPrograma[programaId];
@@ -153,6 +156,24 @@ function renderProyectos(programa) {
                     </svg>
                     <span>${proyecto.beneficiarios}+ Beneficiarios</span>
                 </div>
+                
+                ${proyecto.enlaceWeb ? `
+                    <div class="proyecto-enlace-web">
+                        <a href="${proyecto.enlaceWeb}" target="_blank" rel="noopener noreferrer" class="btn-enlace-web">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                            Visitar sitio web del Club Dynamo
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                ` : ''}
             </div>
         </div>
     `).join('');
@@ -161,6 +182,19 @@ function renderProyectos(programa) {
 // === RENDERIZAR ACTIVIDADES ===
 function renderActividades(programa) {
     const container = document.getElementById('actividadesGrid');
+    
+    if (!programa.actividades || programa.actividades.length === 0) {
+        container.innerHTML = `
+            <div class="mensaje-vacio">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <p>Aún no tenemos Actividades Regulares, pero pensamos en tenerlas próximamente</p>
+            </div>
+        `;
+        return;
+    }
     
     container.innerHTML = programa.actividades.map(actividad => `
         <div class="actividad-card">
@@ -191,6 +225,213 @@ function renderActividades(programa) {
             </div>
         </div>
     `).join('');
+}
+
+// === RENDERIZAR NECESIDADES ===
+function renderNecesidades(programa) {
+    const container = document.getElementById('necesidadesGrid');
+    
+    if (!programa.necesidades || programa.necesidades.length === 0) {
+        container.innerHTML = `
+            <div class="mensaje-vacio">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <p>Próximamente publicaremos las necesidades específicas del programa</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = programa.necesidades.map(categoria => `
+        <div class="necesidad-categoria">
+            <h4>${categoria.categoria}</h4>
+            <ul>
+                ${categoria.items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        </div>
+    `).join('');
+}
+
+// === RENDERIZAR FUTURO / METAS ===
+function renderFuturo(programa) {
+    if (!programa.futuro) return;
+    
+    // Título y descripción
+    document.getElementById('futuroTitulo').textContent = programa.futuro.titulo;
+    document.getElementById('futuroDescripcion').textContent = programa.futuro.descripcion;
+    
+    // Metas con barras de progreso
+    const metasContainer = document.getElementById('metasLista');
+    metasContainer.innerHTML = programa.futuro.metas.map(meta => `
+        <div class="meta-item">
+            <div class="meta-header">
+                <h4>${meta.objetivo}</h4>
+                <span class="meta-plazo">${meta.plazo}</span>
+            </div>
+            <div class="meta-progreso">
+                <div class="progreso-bar">
+                    <div class="progreso-fill" style="width: ${meta.progreso}%"></div>
+                </div>
+                <span class="progreso-porcentaje">${meta.progreso}%</span>
+            </div>
+        </div>
+    `).join('');
+    
+    // Nuevos proyectos
+    const proyectosContainer = document.getElementById('proyectosTags');
+    proyectosContainer.innerHTML = programa.futuro.nuevosProyectos.map(proyecto => `
+        <span class="proyecto-tag">${proyecto}</span>
+    `).join('');
+}
+
+// === RENDERIZAR CÓMO AYUDAR ===
+function renderComoAyudar(programa) {
+    if (!programa.comoAyudar) return;
+    
+    const container = document.getElementById('ayudarGrid');
+    
+    const secciones = [
+        { titulo: 'Voluntariado', icon: 'users', items: programa.comoAyudar.voluntariado },
+        { titulo: 'Donaciones', icon: 'gift', items: programa.comoAyudar.donaciones },
+        { titulo: 'Alianzas', icon: 'handshake', items: programa.comoAyudar.alianzas }
+    ];
+    
+    container.innerHTML = secciones.map(seccion => `
+        <div class="ayudar-card">
+            <h4>${seccion.titulo}</h4>
+            <ul class="ayudar-lista">
+                ${seccion.items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        </div>
+    `).join('');
+}
+
+// === RENDERIZAR GALERÍA ===
+function renderGaleria(programa) {
+    const container = document.getElementById('galeriaGrid');
+    
+    if (!programa.galeria || programa.galeria.length === 0) {
+        container.innerHTML = `
+            <div class="mensaje-vacio">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                <p>Próximamente agregaremos más fotos y videos del programa</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = programa.galeria.map((item, index) => `
+        <div class="galeria-item" data-index="${index}">
+            ${item.tipo === 'video' 
+                ? `<video src="${item.src}" poster="${item.thumbnail || ''}" class="galeria-media"></video>
+                   <div class="galeria-play-icon">
+                       <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+                           <path d="M8 5v14l11-7z"/>
+                       </svg>
+                   </div>`
+                : `<img src="${item.src}" alt="${item.alt}" class="galeria-media" loading="lazy">`
+            }
+            <div class="galeria-overlay">
+                <p>${item.descripcion}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+// === RENDERIZAR FAQs ===
+function renderFaqs(programa) {
+    const container = document.getElementById('faqsLista');
+    
+    if (!programa.faqs || programa.faqs.length === 0) {
+        container.innerHTML = `
+            <div class="mensaje-vacio">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+                <p>Próximamente agregaremos preguntas frecuentes</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = programa.faqs.map((faq, index) => `
+        <div class="faq-item">
+            <button class="faq-pregunta" data-faq="${index}">
+                <span>${faq.pregunta}</span>
+                <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="faq-respuesta">
+                <p>${faq.respuesta}</p>
+            </div>
+        </div>
+    `).join('');
+    
+    // Setup de acordeón
+    setupFaqsAccordion();
+}
+
+// === ACCORDION DE FAQs ===
+function setupFaqsAccordion() {
+    const faqButtons = document.querySelectorAll('.faq-pregunta');
+    
+    faqButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const faqItem = btn.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+            
+            // Cerrar todos
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Abrir el clickeado si no estaba activo
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
+}
+
+// === RENDERIZAR CONTACTO ESPECÍFICO ===
+function renderContactoEspecifico(programa) {
+    if (!programa.contacto) return;
+    
+    document.getElementById('coordinadorNombre').textContent = programa.contacto.coordinador;
+    document.getElementById('coordinadorEmail').textContent = programa.contacto.email;
+    document.getElementById('coordinadorTelefono').textContent = programa.contacto.telefono;
+    document.getElementById('coordinadorHorario').textContent = `Horario: ${programa.contacto.horarioAtencion}`;
+}
+
+// === SETUP BOTONES DE CONTACTO ===
+function setupBotonesContacto(programa) {
+    if (!programa.contacto) return;
+    
+    const botones = document.querySelectorAll('#btnContactarPrograma, #btnContactarCoordinador');
+    
+    botones.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const mensaje = `¡Hola! Me comunico desde la web de FUNDAMENTE. Me gustaría obtener más información sobre el programa de ${programa.nombre}. ¿Podrían ayudarme?`;
+            const mensajeCodificado = encodeURIComponent(mensaje);
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensajeCodificado}`;
+            
+            window.open(url, '_blank');
+            
+            console.log('📱 WhatsApp abierto para contactar coordinador');
+        });
+    });
 }
 
 // === MOSTRAR ERROR ===
@@ -389,7 +630,3 @@ document.addEventListener('DOMContentLoaded', () => {
     checkOverflow();
     window.addEventListener('resize', checkOverflow);
 });
-
-// === LOG DE CONSOLA ===
-console.log('%c¡Bienvenido a FUNDAMENTE! 🎉', 'color: #FF6B35; font-size: 24px; font-weight: bold;');
-console.log('%cFundación Integral de Desarrollo', 'color: #4CAF50; font-size: 14px;');

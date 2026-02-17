@@ -602,7 +602,7 @@ if (badgeNumber) {
     const badgeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = 2022;
+                const target = 2020;
                 animateCounter(badgeNumber, target, 1500);
                 badgeObserver.unobserve(entry.target);
             }

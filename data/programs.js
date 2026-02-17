@@ -422,6 +422,20 @@ const programasData = {
                 ],
                 imagen: '../public/img/clubdeportivodynamo.jpg',
                 enlaceWeb: 'https://clubdeportivodynamo.netlify.app/',
+            },
+            {
+                id: 'talento-atletismo-[nombre]',
+                nombre: 'Desarrollo de Talento en Atletismo',
+                descripcion: 'Identificación y apoyo integral a joven talento en atletismo del Club Deportivo Dynamo. La Fundación Fundamente subsidia su entrenamiento especializado para potenciar su desarrollo deportivo y construcción de proyecto de vida.',
+                periodo: '2026',
+                beneficiarios: 1, // O más si hay otros en situación similar
+                logros: [
+                    'Identificación de potencial atlético',
+                    'Entrenamiento especializado en pista',
+                    'Apoyo integral para proyecto de vida deportivo',
+                    'Seguimiento personalizado de desarrollo'
+                ],
+                imagen: '../public/img/atletlabeneficiado.jpeg',
             }
         ],
 
@@ -553,7 +567,16 @@ const programasData = {
                 alt: 'Deportistas beneficiados',
                 descripcion: 'Más de 200 deportistas con subsidio de Fundamente'
             },
+            {
+                tipo: 'imagen',
+                src: '../public/img/guayosnuevos.jpeg',
+                alt: 'Donación de guayos desde Suiza',
+                descripcion: 'Alianza internacional: Guayos gestionados desde Suiza entregados al Club Dynamo'
+            }
 
+
+
+            
         ],
 
         // FAQs del programa
@@ -1474,4 +1497,3 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = programasData;
 }
 
-console.log('✅ Datos de los Programas de Educación y Deporte cargados correctamente');

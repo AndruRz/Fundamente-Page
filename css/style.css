@@ -3819,3 +3819,835 @@ button {
         gap: 2.5rem;
     }
 }
+
+
+/* ============================================
+   ALIANZAS ESTRATÉGICAS SECTION - CSS CORREGIDO
+   ============================================ */
+
+.alianzas-estrategicas {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f5 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.alianzas-estrategicas::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.alianzas-estrategicas::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+.alianzas-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* === ALIANZA DESTACADA === */
+.alianza-destacada {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 2px solid rgba(255, 107, 53, 0.1);
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.alianza-destacada:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+.destacada-badge {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
+    color: #2C3E50;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+    z-index: 2;
+}
+
+.destacada-badge svg {
+    width: 20px;
+    height: 20px;
+}
+
+.destacada-content {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 0;
+}
+
+.destacada-imagen {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.destacada-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.alianza-destacada:hover .destacada-imagen img {
+    transform: scale(1.08);
+}
+
+.destacada-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+}
+
+.destacada-pais {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.destacada-pais svg {
+    width: 32px;
+    height: 32px;
+    color: #FF6B35;
+}
+
+.destacada-info {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.destacada-nombre {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #2C3E50;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.destacada-rol {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FF6B35;
+    margin: 0;
+}
+
+.destacada-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.destacada-descripcion p {
+    font-size: 1.05rem;
+    color: #6c757d;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.destacada-logros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(76, 175, 80, 0.05) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 107, 53, 0.1);
+}
+
+.logro-item {
+    text-align: center;
+}
+
+.logro-numero {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.logro-texto {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* === SUBTÍTULO OTRAS ALIANZAS === */
+.alianzas-subtitle {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.alianzas-subtitle h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2C3E50;
+    margin-bottom: 0.75rem;
+}
+
+.alianzas-subtitle p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* === CARRUSEL DE ALIANZAS - CORREGIDO === */
+.alianzas-carousel-wrapper {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto 4rem;
+    padding: 0 60px;
+}
+
+.alianzas-carousel {
+    overflow: hidden;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* === TARJETA DE ALIANZA EN CARRUSEL - CORREGIDO === */
+.alianza-card {
+    flex: 0 0 auto;
+    width: calc((100% - 4rem) / 3); /* 3 cards en desktop */
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.alianza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border-color: #FF6B35;
+}
+
+.alianza-card-header {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.alianza-card-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.alianza-card:hover .alianza-card-imagen {
+    transform: scale(1.1);
+}
+
+.alianza-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.alianza-pais {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #2C3E50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.alianza-pais svg {
+    width: 18px;
+    height: 18px;
+    color: #FF6B35;
+}
+
+.alianza-card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.alianza-nombre {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #2C3E50;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.alianza-rol {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #FF6B35;
+    margin: 0;
+}
+
+.alianza-descripcion {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.7;
+    margin: 0;
+    flex: 1;
+}
+
+.alianza-contribuciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.contribucion-tag {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+    color: #2C3E50;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+/* === NAVEGACIÓN DEL CARRUSEL === */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border: 2px solid #FF6B35;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-nav:hover {
+    background: #FF6B35;
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.carousel-nav:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
+
+.carousel-nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-nav:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* === INDICADORES DEL CARRUSEL === */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot:hover {
+    background: #9ca3af;
+    transform: scale(1.2);
+}
+
+.carousel-dot.active {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);
+    width: 32px;
+    border-radius: 6px;
+}
+
+/* === CTA FINAL === */
+.alianzas-cta {
+    max-width: 1000px;
+    margin: 6rem auto 0;
+    padding: 4rem 3rem;
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C61 100%);
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+}
+
+.alianzas-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+    opacity: 0.4;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta-content h3 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.cta-content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-content .btn {
+    background: #ffffff;
+    color: #FF6B35;
+    min-width: 220px;
+}
+
+.cta-content .btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cta-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+}
+
+.circle-2 {
+    width: 150px;
+    height: 150px;
+    bottom: -30px;
+    left: 50px;
+}
+
+.circle-3 {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+/* === RESPONSIVE CORREGIDO === */
+
+/* Tablets grandes (2 cards) */
+@media screen and (max-width: 1200px) {
+    .alianza-card {
+        width: calc((100% - 2rem) / 2);
+    }
+}
+
+/* Tablets (1 card) */
+@media screen and (max-width: 1024px) {
+    .destacada-content {
+        grid-template-columns: 1fr;
+    }
+
+    .destacada-imagen {
+        min-height: 400px;
+    }
+
+    .destacada-logros {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .alianza-card {
+        width: calc((100% - 2rem) / 2);
+    }
+}
+
+/* Mobile y tablets pequeñas (1 card) */
+@media screen and (max-width: 768px) {
+    .alianzas-estrategicas {
+        padding: 5rem 0;
+    }
+
+    .alianzas-container {
+        padding: 0 1.5rem;
+    }
+
+    .alianza-destacada {
+        margin-bottom: 4rem;
+    }
+
+    .destacada-badge {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .destacada-imagen {
+        min-height: 350px;
+    }
+
+    .destacada-info {
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .destacada-nombre {
+        font-size: 2rem;
+    }
+
+    .destacada-rol {
+        font-size: 1rem;
+    }
+
+    .destacada-descripcion p {
+        font-size: 1rem;
+    }
+
+    .destacada-logros {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .logro-numero {
+        font-size: 2rem;
+    }
+
+    .alianzas-subtitle h3 {
+        font-size: 1.6rem;
+    }
+
+    /* CARRUSEL - 1 CARD EN MOBILE */
+    .alianzas-carousel-wrapper {
+        padding: 0 50px;
+    }
+
+    .carousel-track {
+        gap: 1.5rem;
+    }
+
+    .alianza-card {
+        width: 100%;
+    }
+
+    .carousel-nav {
+        width: 44px;
+        height: 44px;
+    }
+
+    .carousel-nav svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .alianza-card-header {
+        height: 240px;
+    }
+
+    .alianza-card-body {
+        padding: 1.5rem;
+    }
+
+    .alianza-nombre {
+        font-size: 1.25rem;
+    }
+
+    .alianzas-cta {
+        padding: 3rem 2rem;
+        margin-top: 4rem;
+    }
+
+    .cta-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Mobile pequeño */
+@media screen and (max-width: 480px) {
+    .alianzas-estrategicas {
+        padding: 4rem 0;
+    }
+
+    .alianzas-container {
+        padding: 0 1rem;
+    }
+
+    .alianza-destacada {
+        border-radius: 24px;
+    }
+
+    .destacada-badge {
+        position: static;
+        margin: 1rem 1rem 0;
+        width: fit-content;
+    }
+
+    .destacada-imagen {
+        min-height: 300px;
+    }
+
+    .destacada-info {
+        padding: 1.5rem 1rem;
+    }
+
+    .destacada-nombre {
+        font-size: 1.75rem;
+    }
+
+    .destacada-rol {
+        font-size: 0.95rem;
+    }
+
+    .destacada-descripcion p {
+        font-size: 0.95rem;
+    }
+
+    .destacada-logros {
+        padding: 1.25rem;
+    }
+
+    .logro-numero {
+        font-size: 1.75rem;
+    }
+
+    .logro-texto {
+        font-size: 0.85rem;
+    }
+
+    .alianzas-subtitle {
+        margin-bottom: 3rem;
+    }
+
+    .alianzas-subtitle h3 {
+        font-size: 1.4rem;
+    }
+
+    .alianzas-subtitle p {
+        font-size: 1rem;
+    }
+
+    .alianzas-carousel-wrapper {
+        padding: 0 40px;
+    }
+
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-nav svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .alianza-card-header {
+        height: 220px;
+    }
+
+    .alianza-card-body {
+        padding: 1.25rem;
+        gap: 0.875rem;
+    }
+
+    .alianza-nombre {
+        font-size: 1.15rem;
+    }
+
+    .alianza-rol {
+        font-size: 0.85rem;
+    }
+
+    .alianza-descripcion {
+        font-size: 0.9rem;
+    }
+
+    .contribucion-tag {
+        padding: 0.4rem 0.875rem;
+        font-size: 0.75rem;
+    }
+
+    .alianzas-cta {
+        padding: 2.5rem 1.5rem;
+        border-radius: 24px;
+    }
+
+    .cta-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .cta-content .btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+        display: none;
+    }
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeInAlianza {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alianza-destacada,
+.alianzas-subtitle,
+.alianzas-carousel-wrapper,
+.alianzas-cta {
+    opacity: 0;
+    animation: fadeInAlianza 0.8s ease forwards;
+}
+
+.alianza-destacada {
+    animation-delay: 0.2s;
+}
+
+.alianzas-subtitle {
+    animation-delay: 0.4s;
+}
+
+.alianzas-carousel-wrapper {
+    animation-delay: 0.6s;
+}
+
+.alianzas-cta {
+    animation-delay: 0.8s;
+}

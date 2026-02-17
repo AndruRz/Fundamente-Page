@@ -436,19 +436,12 @@ const imageObserver = new IntersectionObserver((entries) => {
 
 lazyImages.forEach(img => imageObserver.observe(img));
 
-// === CONSOLA: MENSAJE DE BIENVENIDA ===
-console.log('%c¡Bienvenido a FUNDAMENTE! 🎉', 'color: #FF6B35; font-size: 24px; font-weight: bold;');
-console.log('%cFundación Integral de Desarrollo', 'color: #4CAF50; font-size: 14px;');
-console.log('%cTransformando vidas en Ciudad Córdoba desde 2022', 'color: #666; font-size: 12px;');
-
 // === DETECTAR MODO OSCURO DEL SISTEMA ===
 const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 const handleDarkMode = (e) => {
     if (e.matches) {
-        console.log('🌙 Modo oscuro detectado');
     } else {
-        console.log('☀️ Modo claro detectado');
     }
 };
 
@@ -457,7 +450,6 @@ handleDarkMode(darkModeQuery);
 
 // === ANALYTICS: TRACKING DE INTERACCIONES (Placeholder) ===
 const trackEvent = (category, action, label) => {
-    console.log(`📊 Event: ${category} - ${action} - ${label}`);
 };
 
 // Tracking de clicks en CTAs
@@ -739,7 +731,6 @@ btnVerPerfil.forEach(btn => {
         const memberName = memberCard.querySelector('.member-name').textContent.trim();
         
         trackEvent('Equipo', 'Click Ver Perfil', memberName);
-        console.log(`📊 Click en perfil de: ${memberName}`);
         
         // Aquí puedes agregar la funcionalidad del modal si lo necesitas
         // Por ejemplo: openMemberModal(btn.dataset.modal);
@@ -783,7 +774,6 @@ teamMembers.forEach(member => {
         // Si pasó más de 3 segundos hovereando
         if (hoverTime > 3000) {
             trackEvent('Equipo', 'Interés Alto', memberName);
-            console.log(`👀 Interés alto en: ${memberName}`);
         }
         
         hoverTime = 0;
@@ -807,17 +797,9 @@ equipoStyles.textContent = `
 `;
 document.head.appendChild(equipoStyles);
 
-// === LOG DE INICIALIZACIÓN ===
-console.log('✅ Sección Equipo inicializada correctamente');
-console.log(`👥 ${teamMembers.length} miembros del equipo detectados`);
-console.log(`📊 ${memberStats.length} conjuntos de estadísticas para animar`);
-
 // ============================================
 // MODAL DE PERFIL DEL EQUIPO
 // ============================================
-
-// Cargar datos del equipo (asegúrate de incluir el script en el HTML)
-// <script src="./data/info.js"></script>
 
 // === CREAR ESTRUCTURA DEL MODAL ===
 function createModalStructure() {
@@ -1117,7 +1099,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-console.log('✅ Sistema de modales inicializado correctamente');
 
 // ============================================
 // LIGHTBOX PARA GALERÍA DE IMÁGENES
@@ -1312,7 +1293,6 @@ class ImageLightbox {
 // Inicializar el lightbox cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     const lightbox = new ImageLightbox();
-    console.log('✅ Lightbox de galería inicializado');
 });
 
 /* ============================================
@@ -1351,8 +1331,6 @@ class FundamenteGallery {
         // Setup de video modal
         this.setupVideoModal();
         
-        console.log('✅ Galería FUNDAMENTE inicializada');
-        console.log(`📸 ${this.totalItems} items en galería, ${this.totalPages} páginas`);
     }
 
     loadPage(pageIndex) {
@@ -2674,6 +2652,389 @@ function setupBotonApoyarHero() {
         }
     });
 }
+
+/* ============================================
+   ALIANZAS ESTRATÉGICAS - JAVASCRIPT CORREGIDO
+   ============================================ */
+
+// === CLASE CARRUSEL DE ALIANZAS - CORREGIDA ===
+class AlianzasCarousel {
+    constructor() {
+        this.currentIndex = 0;
+        this.itemsPerPage = this.getItemsPerPage();
+        this.totalItems = alianzasData.length;
+        this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+        this.isTransitioning = false;
+        
+        this.track = document.getElementById('alianzasTrack');
+        this.prevBtn = document.getElementById('alianzasPrev');
+        this.nextBtn = document.getElementById('alianzasNext');
+        this.dotsContainer = document.getElementById('alianzasDots');
+        this.carousel = document.getElementById('alianzasCarousel');
+        
+        this.init();
+    }
+
+    init() {
+        if (!this.track || !this.prevBtn || !this.nextBtn || !this.dotsContainer) {
+            console.warn('⚠️ Elementos del carrusel de alianzas no encontrados');
+            return;
+        }
+
+        this.createCards();
+        this.createDots();
+        this.setupEvents();
+        this.updateCarousel();
+        
+        // Autoplay (opcional)
+        this.startAutoplay();
+        
+        console.log('✅ Carrusel de Alianzas inicializado');
+        console.log(`📊 ${this.totalItems} alianzas, ${this.totalPages} páginas`);
+        console.log(`📱 Items por página: ${this.itemsPerPage}`);
+    }
+
+    getItemsPerPage() {
+        const width = window.innerWidth;
+        if (width <= 768) {
+            return 1; // Mobile: 1 card
+        } else if (width <= 1200) {
+            return 2; // Tablet: 2 cards
+        } else {
+            return 3; // Desktop: 3 cards
+        }
+    }
+
+    createCards() {
+        this.track.innerHTML = ''; // Limpiar antes de crear
+        
+        alianzasData.forEach(alianza => {
+            const card = this.createCardElement(alianza);
+            this.track.appendChild(card);
+        });
+    }
+
+    createCardElement(alianza) {
+        const card = document.createElement('article');
+        card.className = 'alianza-card';
+        card.dataset.id = alianza.id;
+        
+        // Construir tags de contribuciones
+        const contribucionesHTML = alianza.contribuciones
+            .map(contrib => `<span class="contribucion-tag">${contrib}</span>`)
+            .join('');
+        
+        card.innerHTML = `
+            <div class="alianza-card-header">
+                <img src="${alianza.imagen}" 
+                     alt="${alianza.nombre}" 
+                     class="alianza-card-imagen"
+                     onerror="this.src='./public/img/team/default-avatar.jpg'">
+                <div class="alianza-card-overlay">
+                    <div class="alianza-pais">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span>${alianza.pais}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alianza-card-body">
+                <h3 class="alianza-nombre">${alianza.nombre}</h3>
+                <p class="alianza-rol">${alianza.rol}</p>
+                <p class="alianza-descripcion">${alianza.descripcion}</p>
+                
+                <div class="alianza-contribuciones">
+                    ${contribucionesHTML}
+                </div>
+            </div>
+        `;
+        
+        return card;
+    }
+
+    createDots() {
+        this.dotsContainer.innerHTML = ''; // Limpiar antes de crear
+        
+        for (let i = 0; i < this.totalPages; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot';
+            dot.setAttribute('aria-label', `Ir a página ${i + 1}`);
+            dot.dataset.index = i;
+            
+            if (i === this.currentIndex) {
+                dot.classList.add('active');
+            }
+            
+            dot.addEventListener('click', () => {
+                this.goToPage(i);
+            });
+            
+            this.dotsContainer.appendChild(dot);
+        }
+    }
+
+    setupEvents() {
+        this.prevBtn.addEventListener('click', () => {
+            this.prev();
+        });
+
+        this.nextBtn.addEventListener('click', () => {
+            this.next();
+        });
+
+        // Touch/Swipe para móviles
+        this.setupSwipe();
+
+        // Pausar autoplay al hover
+        if (this.carousel) {
+            this.carousel.addEventListener('mouseenter', () => {
+                this.stopAutoplay();
+            });
+
+            this.carousel.addEventListener('mouseleave', () => {
+                this.startAutoplay();
+            });
+        }
+
+        // Resize listener
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                this.handleResize();
+            }, 250);
+        });
+    }
+
+    setupSwipe() {
+        let startX = 0;
+        let isDragging = false;
+
+        this.track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            this.stopAutoplay();
+        });
+
+        this.track.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            // Prevenir scroll vertical mientras se hace swipe horizontal
+            const moveX = e.touches[0].clientX;
+            const diff = startX - moveX;
+            if (Math.abs(diff) > 10) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        this.track.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            // Threshold de 50px para considerar el swipe
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    this.next();
+                } else {
+                    this.prev();
+                }
+            }
+
+            isDragging = false;
+            this.startAutoplay();
+        });
+    }
+
+    handleResize() {
+        const newItemsPerPage = this.getItemsPerPage();
+        
+        // Solo actualizar si cambió el número de items
+        if (newItemsPerPage !== this.itemsPerPage) {
+            console.log(`📱 Cambio responsive: ${this.itemsPerPage} → ${newItemsPerPage} items por página`);
+            
+            this.itemsPerPage = newItemsPerPage;
+            this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+            
+            // Si la página actual ya no existe, ir a la última válida
+            if (this.currentIndex >= this.totalPages) {
+                this.currentIndex = Math.max(0, this.totalPages - 1);
+            }
+            
+            // Recrear dots
+            this.createDots();
+            
+            // Actualizar posición sin animación
+            this.updateCarousel(false);
+        } else {
+            // Solo recalcular posición
+            this.updateCarousel(false);
+        }
+    }
+
+    prev() {
+        if (this.isTransitioning) return;
+        
+        if (this.currentIndex > 0) {
+            this.isTransitioning = true;
+            this.currentIndex--;
+            this.updateCarousel();
+            this.trackEvent('Carrusel Alianzas', 'Anterior', this.currentIndex);
+            
+            setTimeout(() => {
+                this.isTransitioning = false;
+            }, 500);
+        }
+    }
+
+    next() {
+        if (this.isTransitioning) return;
+        
+        if (this.currentIndex < this.totalPages - 1) {
+            this.isTransitioning = true;
+            this.currentIndex++;
+            this.updateCarousel();
+            this.trackEvent('Carrusel Alianzas', 'Siguiente', this.currentIndex);
+            
+            setTimeout(() => {
+                this.isTransitioning = false;
+            }, 500);
+        }
+    }
+
+    goToPage(index) {
+        if (this.isTransitioning) return;
+        
+        if (index >= 0 && index < this.totalPages && index !== this.currentIndex) {
+            this.isTransitioning = true;
+            this.currentIndex = index;
+            this.updateCarousel();
+            this.trackEvent('Carrusel Alianzas', 'Ir a página', index);
+            
+            setTimeout(() => {
+                this.isTransitioning = false;
+            }, 500);
+        }
+    }
+
+    updateCarousel(animate = true) {
+        const cards = this.track.querySelectorAll('.alianza-card');
+        if (cards.length === 0) return;
+        
+        // Obtener dimensiones reales
+        const cardWidth = cards[0].offsetWidth;
+        const gap = parseFloat(getComputedStyle(this.track).gap) || 32;
+        
+        // Calcular desplazamiento basado en items por página
+        const offset = -(this.currentIndex * this.itemsPerPage * (cardWidth + gap));
+        
+        // Aplicar transformación
+        if (animate) {
+            this.track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        } else {
+            this.track.style.transition = 'none';
+        }
+        
+        this.track.style.transform = `translateX(${offset}px)`;
+        
+        // Forzar reflow si no hay animación
+        if (!animate) {
+            void this.track.offsetWidth;
+            this.track.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
+
+        // Actualizar botones
+        this.prevBtn.disabled = this.currentIndex === 0;
+        this.nextBtn.disabled = this.currentIndex >= this.totalPages - 1;
+
+        // Actualizar dots
+        const dots = this.dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+            if (index === this.currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    startAutoplay() {
+        this.stopAutoplay();
+        
+        this.autoplayInterval = setInterval(() => {
+            if (this.currentIndex < this.totalPages - 1) {
+                this.next();
+            } else {
+                this.goToPage(0);
+            }
+        }, 5000); // Cambiar cada 5 segundos
+    }
+
+    stopAutoplay() {
+        if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+            this.autoplayInterval = null;
+        }
+    }
+
+    trackEvent(category, action, label) {
+        if (typeof trackEvent === 'function') {
+            trackEvent(category, action, label);
+        } else {
+            console.log(`📊 Event: ${category} - ${action} - ${label}`);
+        }
+    }
+}
+
+// === ANIMACIÓN DE ENTRADA DE LA SECCIÓN ===
+const alianzasSection = document.querySelector('.alianzas-estrategicas');
+
+const alianzasObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('section-visible');
+            
+            // Animar header
+            const header = entry.target.querySelector('.section-header');
+            if (header) {
+                header.style.opacity = '1';
+                header.style.transform = 'translateY(0)';
+            }
+            
+            alianzasObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+// === INICIALIZACIÓN ===
+document.addEventListener('DOMContentLoaded', () => {
+    // Verificar que los datos existan
+    if (typeof alianzasData === 'undefined') {
+        console.error('❌ alianzasData no está definido. Asegúrate de incluir alianzas-data.js');
+        return;
+    }
+
+    // Inicializar carrusel
+    window.alianzasCarouselInstance = new AlianzasCarousel();
+
+    // Preparar animación de header
+    if (alianzasSection) {
+        const header = alianzasSection.querySelector('.section-header');
+        if (header) {
+            header.style.opacity = '0';
+            header.style.transform = 'translateY(30px)';
+            header.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        }
+        
+        alianzasObserver.observe(alianzasSection);
+    }
+});
 
 // Agregar al DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
